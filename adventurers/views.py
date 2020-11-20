@@ -1,10 +1,13 @@
 from django.shortcuts import render, HttpResponse
 
+from .models import Adventurer
+
 def index(request):
-    return render(request, 'adventurers/index.html', {})
+    adv_data = Adventurer.objects.values()
+    return render(request, 'adventurers/index.html', {'adv_data': adv_data})
 
 def player(request, character_id):
-    return HttpResponse("Character you are playing")
+    return render(request, 'adventurers/player.html')
 
 def create(request):
-    return HttpResponse("Add new character")
+    return render(request, 'adventurers/create.html')
