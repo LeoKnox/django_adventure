@@ -1,3 +1,6 @@
+{% etends 'base.html' %}
+
+{% block content %}
 <h1>Your Characters</h1>
 
 <table>
@@ -13,7 +16,7 @@
 {% for adv in adv_data %}
     <tr>
         <td>{{ adv.name }}</td>
-        <td>{{ adv.char_class }}</td>
+        <td>{{ adv.char_class.get_char_class_display }}</td>
         <td>{{ adv.race }}</td>
         <td>{{ adv.attack }}</td>
         <td>{{ adv.defense }}</td>
@@ -22,3 +25,4 @@
     </tr>
 {% endfor %}
 </table>
+{% endblock %}
