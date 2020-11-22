@@ -15,7 +15,7 @@
     </tr>
 {% for adv in adv_data %}
     <tr>
-        <td>{{ adv.name }}</td>
+        <td><a href="{{ adv.id }}/player/">{{ adv.name }}</a></td>
         <td>{{ adv.char_class }}</td>
         <td>{{ adv.race }}</td>
         <td>{{ adv.attack }}</td>
