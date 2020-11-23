@@ -5,6 +5,8 @@
 
 <form action="{% url 'creater' %}" method="post">
     {% csrf_token %}
+    <input type="radio" name="choice" id="choice{{ forloop.char_class }}" value="{{ character.id}}">
+    <br>
     <input type="submit" value="Create">
 </form>
 {% endblock %}
