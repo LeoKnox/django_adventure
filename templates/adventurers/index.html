@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Your Characters</h1>
+
+<table>
+    <tr>
+        <th>Character Name</th>
+        <th>Character Class</th>
+        <th>Character Race</th>
+        <th>Attack</th>
+        <th>Defense</th>
+        <th>AC</th>
+        <th>HP</th>
+    </tr>
+{% for adv in adv_data %}
+    <tr>
+        <td><a href="{{ adv.id }}/player/">{{ adv.name }}</a></td>
+        <td>{{ adv.char_class }}</td>
+        <td>{{ adv.race }}</td>
+        <td>{{ adv.attack }}</td>
+        <td>{{ adv.defense }}</td>
+        <td>{{ adv.hp }}</td>
+        <td>{{ adv.ac }}</td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

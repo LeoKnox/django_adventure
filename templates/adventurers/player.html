@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Current Playing Character</h1>
+<p>Character Name: {{ adv.name }}</p>
+<p>Character Class: {{ adv.char_class }}</p>
+<p>Character Race: {{ adv.race }}</p>
+<p>Attack: {{ adv.attack }}</p>
+<p>Defense: {{ adv.defense }}</p>
+<p>HP: {{ adv.hp }}</p>
+<p>AC: {{ adv.ac }}</p>
+{% endblock %}
