@@ -5,6 +5,9 @@
 
 <form action="{% url 'creater' %}" method="post">
     {% csrf_token %}
+    {% for choice in adventurer.choice_set.all %}
+        <input type="radio" name="choice" id="choice{{ forloop.counter}}" value="{{choice.id }}">
+    {% endfor %}
     <p>Name:<input type="text" name="name"></p>
     <p>Character Class:<input type="text" name="char_class"></p>
     <p>Race:<input type="text" name="race"></p>
