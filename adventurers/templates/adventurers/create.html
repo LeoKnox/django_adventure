@@ -6,6 +6,12 @@
 <form action="{% url 'creater' %}" method="post">
     {% csrf_token %}
     <p>Name:<input type="text" name="name"></p>
+    <p>Character Class:<input type="text" name="char_class"></p>
+    <p>Race:<input type="text" name="race"></p>
+    <p>Attack:<input type="number" name="attack"></p>
+    <p>Defense:<input type="number" name="defense"></p>
+    <p>HP:<input type="number" name="hp"></p>
+    <p>AC:<input type=number" name="ac"></p>
     <br>
     <input type="submit" value="Create">
 </form>
