@@ -14,4 +14,7 @@ def create(request):
     return render(request, 'adventurers/create.html')
 
 def creater(request):
+    form = request.POST
+    print ('dididiid') 
+    print (form)
     return render(request, 'adventurers/index.html')
