@@ -14,5 +14,4 @@ def create(request):
     return render(request, 'adventurers/create.html')
 
 def creater(request):
-    print ('yo yo yo!')
     return render(request, 'adventurers/index.html')
