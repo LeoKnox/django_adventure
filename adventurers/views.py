@@ -15,6 +15,8 @@ def create(request):
 
 def creater(request):
     form = request.POST
-    print ('dididiid') 
-    print (form)
-    return render(request, 'adventurers/index.html')
+    print(form)
+    if form:
+        form.save()
+        return render(request, 'adventurers/index.html')
+    return render(request, 'adventuerers/create.html')
