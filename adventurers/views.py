@@ -15,8 +15,10 @@ def create(request):
 
 def creater(request):
     form = request.POST
-    print(form)
+    new_adv = Adventurer()
+    new_adv.name = form.name
+    print(new_adv)
     if form:
-        form.save()
+        new_adv.save()
         return render(request, 'adventurers/index.html')
     return render(request, 'adventuerers/create.html')
