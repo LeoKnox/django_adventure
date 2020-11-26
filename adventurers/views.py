@@ -15,7 +15,7 @@ def create(request):
 
 def creater(request):
     form = request.POST
-    new_adv = Adventurer(name=form.name)
+    new_adv = Adventurer.objects.create(name=form.name)
     print(new_adv)
     if form:
         new_adv.save()
