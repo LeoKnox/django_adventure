@@ -15,9 +15,9 @@ def create(request):
 
 def creater(request):
     form = request.POST
-    new_adv = Adventurer.objects.create(name=form.name)
-    print(new_adv)
+    print(form.name)
     if form:
+        new_adv = Adventurer.objects.create(name=form.name)
         new_adv.save()
         return render(request, 'adventurers/index.html')
     return render(request, 'adventuerers/create.html')
